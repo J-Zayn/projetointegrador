@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Ônibus na Estrada</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+        body {
+            background-color: #031411;
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #0c4035;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 1.4rem; margin: 0; }
+        h1 span { color: #ffcc00; }
+
+        .btn-sair {
+            background-color: #c0392b; color: white; border: none;
+            padding: 10px 16px; border-radius: 8px; cursor: pointer; font-weight: bold;
+        }
+
+        .card {
+            background-color: #06241e; border: 1px solid #0c4035;
+            padding: 20px; border-radius: 12px; margin-bottom: 15px;
+        }
+
+        .card h2 { color: #ffcc00; margin-top: 0; font-size: 1.2rem; border-bottom: 1px solid #0c4035; padding-bottom: 8px; }
+
+        select, textarea, input {
+            width: 100%; padding: 12px; background: #031411; border: 1px solid #0c4035;
+            color: white; border-radius: 8px; margin-top: 8px; box-sizing: border-box;
+        }
+
+        .btn-acao {
+            width: 100%; padding: 12px; background-color: #ffcc00; color: #031411;
+            border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 15px;
+        }
+
+        .status-badge { display: inline-block; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; margin-top: 5px; }
+        .status-verde { background-color: #27ae60; color: white; }
+        .status-amarelo { background-color: #f1c40f; color: #031411; }
+        .status-cinza { background-color: #7f8c8d; color: white; }
+
+        /* Estilo do container do Mapa */
+        #mapa-gps {
+            height: 250px;
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            border: 1px solid #0c4035;
+            display: none; /* Inicia oculto até receber o GPS */
+        }
+        #mapa-placeholder-texto {
+            padding: 40px; text-align: center; color: #666; border: 1px dashed #0c4035; border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Painel: <span id="user-name">Carregando...</span></h1>
+        <button class="btn-sair" onclick="logout()">Sair da Sessão</button>
+    </header>
+
+    <main id="dashboard-content">
+        <p style="text-align: center; color: #aaa;">Carregando suas informações...</p>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

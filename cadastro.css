@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* ==========================================
+   1. CONFIGURAÇÕES GERAIS E RESET
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #041916 0%, #020f0d 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==========================================
+   2. CARD PRINCIPAL (WELCOME CARD)
+   ========================================== */
+.welcome-card {
+    background-color: #06241e;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-wrapper {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.app-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #ffcc00; 
+    border-radius: 16px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.text-wrapper {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.main-title {
+    font-size: 24px; 
+    font-weight: 700;
+    color: #ffcc00;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 14px; 
+    color: #94a3b8; 
+    line-height: 1.6;
+}
+
+/* ==========================================
+   3. BOTÕES E COMPONENTES DE AÇÃO
+   ========================================== */
+.actions-wrapper {
+    display: flex;
+    flex-direction: row; 
+    gap: 14px; 
+    width: 100%;
+    justify-content: center;
+}
+
+/* Força os botões de escolha do cadastro a ficarem um abaixo do outro */
+.vertical-actions {
+    flex-direction: column !important;
+    gap: 14px;
+    width: 100%;
+}
+
+.btn {
+    flex: 1; 
+    width: 100%;
+    max-width: 100%; /* Ajustado para preencher bem no celular */
+    padding: 14px 16px; 
+    font-size: 14px; 
+    font-weight: 600;
+    border-radius: 10px; 
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+    background-color: #ffcc00;
+    color: #041916;
+    border: none;
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.15);
+}
+
+.btn-primary:hover {
+    background-color: #ffe066;
+    transform: translateY(-1px); 
+    box-shadow: 0 6px 16px rgba(255, 204, 0, 0.25);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffcc00;
+    border: 2px solid rgba(255, 204, 0, 0.3);
+}
+
+.btn-secondary:hover {
+    border-color: #ffcc00;
+    background-color: rgba(255, 204, 0, 0.04);
+    transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+.btn-back-home {
+    background-color: transparent;
+    color: #94a3b8;
+    border: none;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-back-home:hover {
+    color: #ffcc00;
+}
+
+/* ==========================================
+   4. CONTROLADOR DE ETAPAS (CADASTRO/LOGIN)
+   ========================================== */
+
+/* Regra de ouro: esconde os formulários com força total */
+.hidden {
+    display: none !important;
+}
+
+.form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+/* Ajusta a cor dos textos das labels para cinza claro legível */
+.input-group label {
+    font-size: 13px;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+/* Destrói as caixas brancas e aplica o visual Dark Premium */
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+    background-color: #041916; 
+    border: 1px solid rgba(255, 204, 0, 0.2); 
+    border-radius: 12px;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.15);
+}
+
+/* Organiza os botões inferiores (Voltar e Cadastrar) lado a lado */
+.form-wrapper .actions-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 10px;
+}

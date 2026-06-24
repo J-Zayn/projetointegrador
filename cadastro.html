@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Ônibus na Estrada</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+
+    <main class="welcome-card">
+        <div class="text-wrapper">
+            <h1 class="main-title">Criar Conta</h1>
+            <p class="subtitle">Selecione o seu perfil para acessar a plataforma Ônibus na Estrada</p>
+        </div>
+
+        <div id="step-choice" class="actions-wrapper vertical-actions">
+            <button type="button" class="btn btn-primary" id="choose-student">Sou Estudante</button>
+            
+            <button type="button" class="btn btn-secondary" id="choose-driver">Sou Motorista</button>
+            
+            <button type="button" class="btn btn-back-home" id="back-to-home">Voltar ao início</button>
+        </div>
+
+        <form id="form-student" class="form-wrapper hidden">
+            <div class="input-group">
+                <label for="student-name">Nome Completo</label>
+                <input type="text" id="student-name" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="student-email">E-mail</label>
+                <input type="email" id="student-email" placeholder="exemplo@email.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="student-password">Senha</label>
+                <input type="password" id="student-password" placeholder="Crie uma senha segura" required>
+            </div>
+
+            <div class="actions-wrapper">
+                <button type="button" class="btn btn-secondary btn-back-step">Voltar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </form>
+
+        <form id="form-driver" class="form-wrapper hidden">
+            <div class="input-group">
+                <label for="driver-name">Nome Completo</label>
+                <input type="text" id="driver-name" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="driver-token">Matrícula Institucional</label>
+                <input type="text" id="driver-token" placeholder="Digite a matrícula fornecida" required>
+            </div>
+
+            <div class="input-group">
+                <label for="driver-password">Senha</label>
+                <input type="password" id="driver-password" placeholder="Crie uma senha segura" required>
+            </div>
+
+            <div class="actions-wrapper">
+                <button type="button" class="btn btn-secondary btn-back-step">Voltar</button>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </form>
+        </main>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="cadastro.js?v=3"></script>
+</body>
+</html>

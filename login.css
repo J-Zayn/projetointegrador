@@ -1,0 +1,91 @@
+/* Estilos para formulários (aproveitando os que você já deve ter no CSS) */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-group label {
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #0c4035;
+    background: #031411;
+    color: white;
+}
+
+.input-group input:focus {
+    border-color: #ffcc00;
+    outline: none;
+}
+
+.footer-links {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.link-yellow {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-yellow:hover {
+    text-decoration: underline;
+}
+
+.login-body {
+    background-color: #031411;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #06241e;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    border: 1px solid #0c4035;
+}
+
+.login-container h2 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #031411;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.footer-text {
+    margin-top: 15px;
+    color: #aaa;
+    font-size: 0.8rem;
+}

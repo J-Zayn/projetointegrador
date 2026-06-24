@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ônibus na Estrada</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+
+    <style>
+        /* CSS direto no HTML para facilitar */
+        body {
+            background-color: #031411;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+
+        .login-container {
+            background-color: #06241e;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 320px;
+            text-align: center;
+            border: 1px solid #0c4035;
+        }
+
+        .login-container h2 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #0c4035;
+            background: #031411;
+            color: white;
+            box-sizing: border-box; /* Garante que o padding não estique o input */
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #031411;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+
+        .footer-text a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Acessar Plataforma</h2>
+        
+        <form id="form-login">
+            <div class="input-group">
+                <input type="text" id="login-identifier" required placeholder="Nome completo">
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="login-password" required placeholder="Senha">
+            </div>
+
+            <button type="submit" class="btn-login">Entrar</button>
+        </form>
+
+        <p class="footer-text">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

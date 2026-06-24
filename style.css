@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #041916 0%, #020f0d 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.welcome-card {
+    background-color: #06241e;
+    width: 100%;
+    max-width: 1020px;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-wrapper {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.app-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* Nova borda elegante combinando com a identidade visual */
+    border: 2px solid #ffcc00; 
+    border-radius: 16px; /* Cantos arredondados para combinar com o card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil atrás da imagem */
+}
+
+
+.text-wrapper {
+    margin-bottom: 40px;
+}
+
+.main-title {
+    font-size: 24px; 
+    font-weight: 700;
+    color: #ffcc00;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 14px; 
+    color: #94a3b8; 
+    line-height: 1.6;
+}
+
+/* Ajuste nos botões: lado a lado */
+.actions-wrapper {
+    display: flex;
+    flex-direction: row; 
+    gap: 14px; 
+    width: 100%;
+    justify-content: center;
+}
+
+/* Base dos botões compacta e elegante */
+.btn {
+    flex: 1; 
+    max-width: 150px; 
+    padding: 12px 16px; 
+    font-size: 14px; 
+    font-weight: 600;
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Botão Principal (Login) */
+.btn-primary {
+    background-color: #ffcc00;
+    color: #041916;
+    border: none;
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.15);
+}
+
+.btn-primary:hover {
+    background-color: #ffe066;
+    transform: translateY(-1px); 
+    box-shadow: 0 6px 16px rgba(255, 204, 0, 0.25);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Botão Secundário (Cadastre-se) */
+.btn-secondary {
+    background-color: transparent;
+    color: #ffcc00;
+    border: 2px solid rgba(255, 204, 0, 0.25);
+}
+
+.btn-secondary:hover {
+    border-color: #ffcc00;
+    background-color: rgba(255, 204, 0, 0.04);
+    transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
