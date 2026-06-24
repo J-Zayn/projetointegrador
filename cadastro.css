@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* ==========================================
-   1. CONFIGURAÇÕES GERAIS E RESET
-   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -19,9 +16,7 @@ body {
     padding: 20px;
 }
 
-/* ==========================================
-   2. CARD PRINCIPAL (WELCOME CARD)
-   ========================================== */
+
 .welcome-card {
     background-color: #06241e;
     width: 100%;
@@ -70,9 +65,6 @@ body {
     line-height: 1.6;
 }
 
-/* ==========================================
-   3. BOTÕES E COMPONENTES DE AÇÃO
-   ========================================== */
 .actions-wrapper {
     display: flex;
     flex-direction: row; 
@@ -81,7 +73,6 @@ body {
     justify-content: center;
 }
 
-/* Força os botões de escolha do cadastro a ficarem um abaixo do outro */
 .vertical-actions {
     flex-direction: column !important;
     gap: 14px;
@@ -148,11 +139,7 @@ body {
     color: #ffcc00;
 }
 
-/* ==========================================
-   4. CONTROLADOR DE ETAPAS (CADASTRO/LOGIN)
-   ========================================== */
 
-/* Regra de ouro: esconde os formulários com força total */
 .hidden {
     display: none !important;
 }
@@ -172,14 +159,12 @@ body {
     gap: 6px;
 }
 
-/* Ajusta a cor dos textos das labels para cinza claro legível */
 .input-group label {
     font-size: 13px;
     color: #94a3b8;
     font-weight: 600;
 }
 
-/* Destrói as caixas brancas e aplica o visual Dark Premium */
 .input-group input {
     width: 100%;
     padding: 14px 16px;
@@ -197,7 +182,6 @@ body {
     box-shadow: 0 0 10px rgba(255, 204, 0, 0.15);
 }
 
-/* Organiza os botões inferiores (Voltar e Cadastrar) lado a lado */
 .form-wrapper .actions-wrapper {
     display: flex;
     flex-direction: row;
